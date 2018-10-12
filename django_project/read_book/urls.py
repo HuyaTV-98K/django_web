@@ -1,3 +1,7 @@
+# coding: utf-8
+__author__ = 'Mac'
+__date__ = '18-10-12 16:57'
+
 """django_project URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
@@ -13,10 +17,11 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
-from django.contrib import admin
-from django.urls import path, include
+
+from django.urls import path
+from read_book import views
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('read_book/', include('read_book.urls')),
+    path('index/', views.index, name='read_index'),
+
 ]
